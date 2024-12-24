@@ -10,6 +10,8 @@ Quartus prime
 
 **THEORY**
 
+In D flip flop, the single input "D" is referred to as the "Data" input. When the data input is set to 1, the flip flop would be set, and when it is set to 0, the flip flop would change and become reset.
+
 **D Flip-Flop**
 
 D flip-flop operates with only positive clock transitions or negative clock transitions. Whereas, D latch operates with enable signal. That means, the output of D flip-flop is insensitive to the changes in the input, D except for active transition of the clock signal. The circuit diagram of D flip-flop is shown in the following figure.
@@ -36,10 +38,12 @@ Next state of D flip-flop is always equal to data input, D for every positive tr
 */
 
 **RTL LOGIC FOR FLIPFLOPS**
+
 ![Screenshot 2024-12-20 143717](https://github.com/user-attachments/assets/b69fa5c5-1ec9-432c-afa0-daf09af6724d)
 
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
+
 ![Screenshot 2024-12-20 144306](https://github.com/user-attachments/assets/b9f24547-5be3-48e6-9b4c-8baa509b6598)
 
 
