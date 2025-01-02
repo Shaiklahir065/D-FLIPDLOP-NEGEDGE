@@ -10,19 +10,6 @@ Quartus prime
 
 **THEORY**
 
-        module d_ff_neg_edge (d, clk, rst, q);
-          input d, clk, rst;
-          output reg q;
-        
-          always @(negedge clk or posedge rst) begin
-            if (rst)
-              q <= 0; // Reset the flip-flop
-            else
-              q <= d; // D input is passed to Q on the negative clock edge
-          end
-        endmodule
-
-
 **D Flip-Flop**
 
 D flip-flop operates with only positive clock transitions or negative clock transitions. Whereas, D latch operates with enable signal. That means, the output of D flip-flop is insensitive to the changes in the input, D except for active transition of the clock signal. The circuit diagram of D flip-flop is shown in the following figure.
@@ -41,25 +28,44 @@ Next state of D flip-flop is always equal to data input, D for every positive tr
 
 **Procedure**
 
-/* write all the steps invloved */
+1.Type the program in Quartus software.
+
+2.Compile and run the program.
+
+3.Generate the RTL schematic and save the logic diagram.
+
+4.Create nodes for inputs and outputs to generate the timing diagram.
+
+5.For different input combinations generate the timing diagram
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming.
-
+                module exp8(D,c1k,Q,Qbar);
+                input D,c1k;
+                output reg Q;
+                output reg Qbar;
+                initial Q=0;
+                initial Qbar=1;
+                always @(posedge c1k)
+                begin
+                Q=D;
+                Qbar=~D;
+                end
+                endmodule
+                    
 Developed by:shaiklahir
 
 RegisterNumber:24005737
-*/
+
 
 **RTL LOGIC FOR FLIPFLOPS**
 
-![Screenshot 2024-12-20 143717](https://github.com/user-attachments/assets/b69fa5c5-1ec9-432c-afa0-daf09af6724d)
+![image](https://github.com/user-attachments/assets/877b2097-0b2f-4404-b6eb-3c968d365e47)
 
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
-![Screenshot 2024-12-20 144306](https://github.com/user-attachments/assets/b9f24547-5be3-48e6-9b4c-8baa509b6598)
+![image](https://github.com/user-attachments/assets/5ffe2a94-b60b-4bad-966c-c181ff94c1fa)
 
 
 **RESULTS**
